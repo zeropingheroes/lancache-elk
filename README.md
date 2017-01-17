@@ -31,3 +31,17 @@ Restart logstash
 
 `service logstash restart`
 
+## Contributing
+
+Please submit pull requests for improving the configuration files here.
+
+For example:
+
+* Extracting additional fields from URIs
+* Useful Kibana visualisations
+
+Useful sites:
+
+* [Logstash Grok Reference](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html)
+* [Logstash Grok Debugger](https://grokdebug.herokuapp.com/)
+* [Regex 101](https://regex101.com/)
