@@ -21,7 +21,7 @@ Clone this repository
 
 Install the lancache logstash filter
 
-`ln -s /var/git/logstash/conf.d/10-lancache-filter.conf /etc/logstash/conf.d`
+`ln -s /var/git/lancache-elk/logstash/conf.d/10-lancache-filter.conf /etc/logstash/conf.d`
 
 Test the new configuration
 
