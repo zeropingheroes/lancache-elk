@@ -31,6 +31,10 @@ Restart logstash
 
 `service logstash restart`
 
+Import Kibana visualisations and dashboards
+
+`/var/git/lancache-elk/kibana/import.sh`
+
 ## Contributing
 
 Please submit pull requests for improving the configuration files here.
