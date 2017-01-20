@@ -5,7 +5,7 @@ KIBANA_INDEX=".kibana"
 
 BASEDIR=$(dirname "$0")
 
-for file in $BASEDIR/visualisations/*.json
+for file in $BASEDIR/../kibana/visualisations/*.json
 do
     name=`basename $file .json`
     echo "Loading visualization $name:"
@@ -14,7 +14,7 @@ do
     echo
 done
 
-for file in $BASEDIR/dashboards/*.json
+for file in $BASEDIR/../kibana/dashboards/*.json
 do
     name=`basename $file .json`
     echo "Loading visualization $name:"
