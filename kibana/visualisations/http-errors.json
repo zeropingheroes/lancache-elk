@@ -5,6 +5,6 @@
   "description": "",
   "version": 1,
   "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\n  \"index\": \"filebeat-*\",\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"upstream_http_status_code: 5**\"\n    }\n  },\n  \"filter\": []\n}"
+    "searchSourceJSON": "{\n  \"index\": \"filebeat-*\",\n  \"query\": {\n    \"query_string\": {\n      \"analyze_wildcard\": true,\n      \"query\": \"upstream_http_status_code: 5** OR http_status_code: 5** \"\n    }\n  },\n  \"filter\": []\n}"
   }
 }
