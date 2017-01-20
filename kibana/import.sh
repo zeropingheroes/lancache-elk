@@ -13,3 +13,12 @@ do
         -d @$file || exit 1
     echo
 done
+
+for file in $BASEDIR/dashboards/*.json
+do
+    name=`basename $file .json`
+    echo "Loading visualization $name:"
+    curl -XPUT $ELASTICSEARCH/$KIBANA_INDEX/dashboard/$name?pretty \
+        -d @$file || exit 1
+    echo
+done
