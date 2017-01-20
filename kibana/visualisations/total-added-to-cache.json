@@ -1,0 +1,10 @@
+{
+  "title": "Total Added to Cache",
+  "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"bytes\"},\"schema\":\"metric\",\"type\":\"sum\"}],\"listeners\":{},\"params\":{\"fontSize\":60},\"title\":\"New Visualization\",\"type\":\"metric\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"filebeat-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"cache_status:\\\"MISS\\\"\"}},\"filter\":[]}"
+  }
+}
