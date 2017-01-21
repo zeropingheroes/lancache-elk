@@ -2,7 +2,7 @@
   "title": "Blizzard",
   "hits": 0,
   "description": "",
-  "panelsJSON": "[{\"col\":1,\"id\":\"cache-hit-vs-miss\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"HTTP-Errors\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"total-added-to-cache\",\"panelIndex\":3,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"total-served\",\"panelIndex\":4,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"id\":\"cached-urls\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":4}]",
+  "panelsJSON": "[{\"col\":1,\"id\":\"cache-hit-vs-miss\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"http-errors\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"total-added-to-cache\",\"panelIndex\":3,\"row\":4,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"total-served\",\"panelIndex\":4,\"row\":6,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"id\":\"cached-urls\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":4}]",
   "optionsJSON": "{\"darkTheme\":true}",
   "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":false}}}",
   "version": 1,
