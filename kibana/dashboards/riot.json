@@ -1,0 +1,15 @@
+{
+  "title": "Riot",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"id\":\"cache-hit-vs-miss\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"HTTP-Errors\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":9,\"size_y\":3,\"col\":4,\"row\":4},{\"id\":\"total-added-to-cache\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":3},{\"id\":\"total-served\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":5},{\"id\":\"cached-urls\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":9,\"size_y\":3,\"col\":4,\"row\":1}]",
+  "optionsJSON": "{\"darkTheme\":true}",
+  "uiStateJSON": "{}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now/y",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"upstream:riot\",\"analyze_wildcard\":true}}}]}"
+  }
+}
