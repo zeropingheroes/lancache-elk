@@ -48,4 +48,5 @@ Useful sites:
 
 * [Logstash Grok Reference](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html)
 * [Logstash Grok Debugger](https://grokdebug.herokuapp.com/)
+* [Grok Patterns](https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns)
 * [Regex 101](https://regex101.com/)
