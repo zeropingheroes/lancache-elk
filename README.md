@@ -3,13 +3,31 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with EL
 
 ## Requirements
 
+### ELK Server
 * Ubuntu Server 16.04
-* [Installation of ELK](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04)
-* `zeropingheroes/lancache` running on another server
+* [ELK](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04)
+
+### Lancache Server
+* [`zeropingheroes/lancache`](https://github.com/zeropingheroes/lancache)
+* [Filebeat](https://www.elastic.co/guide/en/beats/libbeat/5.1/setup-repositories.html)
 
 ## Installation
 
-### On your ELK server:
+### On your Lancache server
+
+Edit `install/filebeat/filebeat.yml` and ensure `output-logstash` is configured to ship logs to your ELK server
+
+`nano /etc/nginx/install/filebeat/filebeat.yml`
+
+Install the filebeat configuration file
+
+`/etc/nginx/install/install-filebeat-config.sh`
+
+Restart filebeat
+
+`sudo systemctl restart filebeat`
+
+### On your ELK server
 
 Make a directory for this repository
 
