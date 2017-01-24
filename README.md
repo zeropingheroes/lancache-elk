@@ -7,7 +7,7 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with EL
 * [Installation of ELK](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elk-stack-on-ubuntu-14-04)
 * `zeropingheroes/lancache` running on another server
 
-## Usage
+## Installation
 
 ### On your ELK server:
 
@@ -34,6 +34,37 @@ Restart logstash
 Import Kibana visualisations and dashboards
 
 `/var/git/lancache-elk/kibana/import.sh`
+
+### Configure Kibana
+
+After ELK has captured some log messages, log in to Kibana's web interface and complete these last steps:
+
+#### Refresh Indexes
+1. Open **Settings** and click **Indices**
+2. Click the **filebeat-** index pattern
+3. Click the amber **refresh field list** button
+
+Do this when you see an unindexed field n the **Discover** view (amber warning triangle).
+
+#### Format Field: Bytes
+1. Scroll down to the **bytes** field and click the **edit** pencil
+2. Change the **format** dropdown to **Bytes**
+3. Change the **format pattern** to: *0,0.[0]b*
+4. Click **Update Field**
+
+#### Format Field: Steam ID 3
+1. Scroll down to the **steam_id_3** field and click the **edit** pencil
+2. Change the **format** dropdown to **Url**
+3. Change Url Template to: *http://steamid.co/player.php?input=U:1:{{value}}*
+4. Change **Label Template** to *{{value}}*
+5. Click **Update Field**
+
+#### Format Field: Steam Depot ID
+1. Scroll down to the **steam_depot_id** field and click the **edit** pencil
+2. Change the **format** dropdown to **Url**
+3. Change Url Template to: *http://steamdb.info/depot/{{value}}*
+4. Change **Label Template** to *Depot {{value}}*
+5. Click **Update Field**
 
 ## Contributing
 
