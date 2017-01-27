@@ -1,5 +1,5 @@
 {
-  "title": "Total Added to Cache",
+  "title": "Total Added To Cache",
   "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"bytes\"},\"schema\":\"metric\",\"type\":\"sum\"}],\"listeners\":{},\"params\":{\"fontSize\":60},\"title\":\"New Visualization\",\"type\":\"metric\"}",
   "uiStateJSON": "{}",
   "description": "",

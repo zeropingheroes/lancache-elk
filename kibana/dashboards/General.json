@@ -1,0 +1,15 @@
+{
+  "title": "General",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"Cache-Hit-vs-Miss\",\"panelIndex\":1,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":4,\"id\":\"HTTP-Errors\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Total-Added-To-Cache\",\"panelIndex\":3,\"row\":5,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Total-Served\",\"panelIndex\":4,\"row\":7,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"id\":\"Cached-URLs\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":9,\"size_y\":4,\"col\":4,\"row\":3},{\"id\":\"Unique-Clients\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":3,\"size_y\":2,\"col\":1,\"row\":3},{\"id\":\"Proxied-URLs-Not-Cached\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":9,\"size_y\":2,\"col\":4,\"row\":7}]",
+  "optionsJSON": "{\"darkTheme\":true}",
+  "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":false}}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now/y",
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"upstream:*\"}}}]}"
+  }
+}

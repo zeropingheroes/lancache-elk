@@ -1,5 +1,5 @@
 {
-  "title": "Proxied URLs (Not Cached)",
+  "title": "Proxied URLs Not Cached",
   "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{\"field\":\"url_path\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"id\":\"2\",\"params\":{\"field\":\"upstream\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":0},\"schema\":\"bucket\",\"type\":\"terms\"},{\"id\":\"3\",\"params\":{\"field\":\"url_path\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":0},\"schema\":\"bucket\",\"type\":\"terms\"},{\"id\":\"4\",\"params\":{\"field\":\"bytes\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":0},\"schema\":\"bucket\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"title\":\"URLs Not Cached\",\"type\":\"table\"}",
   "uiStateJSON": "{}",
   "description": "",
