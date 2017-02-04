@@ -70,6 +70,13 @@ Do this when you see an unindexed field n the **Discover** view (amber warning t
 3. Change the **format pattern** to: *0,0.[0]b*
 4. Click **Update Field**
 
+#### Format Fields: range_* & slice_range_*
+1. Scroll down to the **range_start** field and click the **edit** pencil
+2. Change the **format** dropdown to **Bytes**
+3. Change the **format pattern** to: *0,0.[000]b*
+4. Click **Update Field**
+5. Repeat this process for **range_end**, **slice_range_start** and **slice_range_end**
+
 #### Format Field: Steam ID 3
 1. Scroll down to the **steam_id_3** field and click the **edit** pencil
 2. Change the **format** dropdown to **Url**
