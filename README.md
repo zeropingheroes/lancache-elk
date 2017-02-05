@@ -91,6 +91,20 @@ Do this when you see an unindexed field n the **Discover** view (amber warning t
 4. Change **Label Template** to *Depot {{value}}*
 5. Click **Update Field**
 
+That's it - you're done! Now you can navigate to **Dashboards** and choose a dashboard to see what's going on with your lancache.
+
+# Available Dashboards
+
+* **Overall** - Global cumulative data about the cache
+* **General** - Visualisations that apply to any upstream
+* **Steam** - See which depots are cached, and which Steam users are downloading games
+
+# Known Issues
+
+## Incorrect Cache Hit/Miss Stats for Blizzard and Origin
+Because we use `slice` for these upstreams, Nginx reports a cache hit for almost all requests from clients, as the single client request has spawned one or more subrequests which fill the cache.
+This also means that our statistics for how much data has been added to the cache is incorrect too. If you have a workaround for this behaviour, please submit a pull request. 
+
 ## Contributing
 
 Please submit pull requests for improving the configuration files here.
