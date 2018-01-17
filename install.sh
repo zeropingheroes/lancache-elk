@@ -18,11 +18,6 @@ if [ -f $SCRIPT_DIR/.env ]; then
     source $SCRIPT_DIR/.env
 fi
 
-# Check all required variables are set
-: "${DO_APIKEY:?must be set}"
-: "${DO_DOMAIN:?must be set}"
-: "${DO_EMAIL:?must be set}"
-
 # Add elastic apt repo if it does not already exist
 if [[ ! -f /etc/apt/sources.list.d/elastic-6.x.list ]]; then
     echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
@@ -34,27 +29,7 @@ fi
 /usr/bin/apt install -y elasticsearch \
                         logstash \
                         kibana \
-                        default-jre \
-                        python-pip \
-                        certbot
-
-# Upgrade Python-Pip
-/usr/local/bin/pip install --upgrade pip
-
-# Get letsencrypt certificate
-/usr/bin/certbot certonly --manual \
-    -m ${DO_EMAIL} \
-    --agree-tos \
-    -n \
-    --manual-public-ip-logging-ok \
-    -d elk.lan.zeropingheroes.co.uk \
-    --preferred-challenges dns \
-    --manual-auth-hook lets-do-dns \
-    --manual-cleanup-hook lets-do-dns
-
-# Start the certbot timer (cron)
-/bin/systemctl enable certbot.timer
-/bin/systemctl start certbot.timer
+                        default-jre
 
 # Load the new service file
 /bin/systemctl daemon-reload
