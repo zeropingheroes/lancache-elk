@@ -61,3 +61,6 @@ chmod 0640 /etc/logstash/conf.d/*
 /bin/systemctl start logstash
 /bin/systemctl start kibana
 /bin/systemctl start nginx
+
+# Reload Nginx to pick up the new config
+/bin/systemctl reload nginx
