@@ -15,7 +15,7 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with El
 
 ## Installation
 
-1. `git clone https://github.com/zeropingheroes/lancache-installer.git && cd lancache-installer`
+1. `git clone https://github.com/zeropingheroes/lancache-elk.git && cd lancache-elk`
 
 2.  `./install.sh`
 
