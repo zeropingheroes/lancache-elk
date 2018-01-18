@@ -8,7 +8,7 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with El
 
 * Ubuntu Server 16.04
 
-### Lancache Server
+### Lancache Server
 
 * [`zeropingheroes/lancache`](https://github.com/zeropingheroes/lancache)
 * [`zeropingheroes/lancache-filebeat`](https://github.com/zeropingheroes/lancache-filebeat)
@@ -46,7 +46,7 @@ Do this when you see an unindexed field in the **Discover** view (amber warning 
 4. Click **Update Field**
 5. Repeat this process for **range_end**, **slice_range_start** and **slice_range_end**
 
-#### Format Field: Steam ID 3
+#### Format Field: Steam ID 3
 
 1. Scroll down to the **steam_id_3** field and click the **edit** pencil
 2. Change the **format** dropdown to **Url**
@@ -54,7 +54,7 @@ Do this when you see an unindexed field in the **Discover** view (amber warning 
 4. Change **Label Template** to *{{value}}*
 5. Click **Update Field**
 
-#### Format Field: Steam Depot ID
+#### Format Field: Steam Depot ID
 
 1. Scroll down to the **steam_depot_id** field and click the **edit** pencil
 2. Change the **format** dropdown to **Url**
