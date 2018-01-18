@@ -1,0 +1,11 @@
+server {
+    listen 80;
+
+    error_log   /var/log/nginx/kibana-error.log;
+    access_log  /var/log/nginx/kibana-access.log;
+
+    location / {
+        rewrite ^/(.*) /$1 break;
+        proxy_pass http://localhost:5601;
+    }
+}
