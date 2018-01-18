@@ -28,10 +28,10 @@ fi
 
 # Install required packages
 /usr/bin/apt update -y
+/usr/bin/apt install -y default-jre
 /usr/bin/apt install -y elasticsearch \
                         logstash \
                         kibana \
-                        default-jre \
                         nginx
 
 # Configure Nginx as reverse proxy for Kibana
