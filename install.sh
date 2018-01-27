@@ -67,3 +67,17 @@ chmod 0640 /etc/logstash/conf.d/*
 
 # Import the Kibana index pattern
 curl -X POST -H "Content-Type: application/json" -H "kbn-xsrf: true" -i -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json http://localhost:5601/api/saved_objects/index-pattern
+
+# Import Kibana saved searches
+for FILE in $SCRIPT_DIR/configs/kibana/search/*.json
+do
+    NAME=`basename $FILE .json`
+    echo "Importing Kibana search $NAME:"
+
+    /usr/bin/curl -X POST \
+                  -H "Content-Type: application/json" \
+                  -H "kbn-xsrf: true" -i \
+                  -d@$FILE \
+                  http://localhost:5601/api/saved_objects/search
+    echo
+done

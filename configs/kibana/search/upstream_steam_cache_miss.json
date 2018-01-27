@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "title": "upstream_steam_cache_miss",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "_source"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream:steam AND cache_status:MISS\",\"language\":\"lucene\"},\"filter\":[]}"
+    }
+  }
+}

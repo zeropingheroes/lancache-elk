@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "title": "upstream_steam_depot_request",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "_source"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"_exists_:steam_depot_id\",\"language\":\"lucene\"},\"filter\":[]}"
+    }
+  }
+}
