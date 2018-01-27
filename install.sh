@@ -65,11 +65,23 @@ chmod 0640 /etc/logstash/conf.d/*
 # Reload Nginx to pick up the new config
 /bin/systemctl reload nginx
 
+# Wait for Kibana to start
+echo "Waiting for Kibana to start"
+while ! curl --output /dev/null --silent --head --fail http://localhost:5601; do
+  sleep 1 && echo -n .
+done
+echo "Kibana started"
+
 # Import the Kibana index pattern
-/usr/bin/curl -X POST -H "Content-Type: application/json" -H "kbn-xsrf: true" -i -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json http://localhost:5601/api/saved_objects/index-pattern
+/usr/bin/curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "kbn-xsrf: true" \
+              -i -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json \
+              "http://localhost:5601/api/saved_objects/index-pattern"
 
 # Install Kibana importer
-/usr/bin/git clone https://github.com/nh2/kibana-importer.git /usr/local/bin/kibana-importer
+rm -rf /tmp/kibana-importer
+/usr/bin/git clone https://github.com/mnp/kibana-importer.git /tmp/kibana-importer
 
 # Import Kibana searches, visualisations and dashboards
-/usr/local/bin/kibana-importer/kibana-importer.py --json $SCRIPT_DIR/configs/kibana/export.json --fix-idx
+/tmp/kibana-importer/kibana-importer.py --json $SCRIPT_DIR/configs/kibana/export.json --fix-idx
