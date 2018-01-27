@@ -40,7 +40,7 @@ ln -s $SCRIPT_DIR/configs/nginx/kibana /etc/nginx/sites-available/kibana
 ln -s /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
 
 # Configure logstash with the lancache pipeline
-ln -s $SCRIPT_DIR/configs/logstash/lancache-pipeline.conf /etc/logstash/conf.d/lancache-pipeline.conf
+cp $SCRIPT_DIR/configs/logstash/lancache-pipeline.conf /etc/logstash/conf.d/lancache-pipeline.conf
 
 # Set the correct permissions on the logstash directory
 chown -R logstash:root /etc/logstash/conf.d
