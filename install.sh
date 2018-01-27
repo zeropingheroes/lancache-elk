@@ -64,3 +64,6 @@ chmod 0640 /etc/logstash/conf.d/*
 
 # Reload Nginx to pick up the new config
 /bin/systemctl reload nginx
+
+# Import the Kibana index pattern
+curl -X POST -H "Content-Type: application/json" -H "kbn-xsrf: true" -i -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json http://localhost:5601/api/saved_objects/index-pattern

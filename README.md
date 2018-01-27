@@ -19,51 +19,6 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with El
 
 2.  `./install.sh`
 
-### Configure Kibana
-
-After ELK has captured some log messages, visit Kibana's web interface and complete these last steps:
-
-#### Refresh Indexes
-
-1. Open **Settings** and click **Indices**
-2. Click the **filebeat-** index pattern
-3. Click the amber **refresh field list** button
-
-Do this when you see an unindexed field in the **Discover** view (amber warning triangle).
-
-#### Format Field: Bytes
-
-1. Scroll down to the **bytes** field and click the **edit** pencil
-2. Change the **format** dropdown to **Bytes**
-3. Change the **format pattern** to: *0,0.[0]b*
-4. Click **Update Field**
-
-#### Format Fields: range_* & slice_range_*
-
-1. Scroll down to the **range_start** field and click the **edit** pencil
-2. Change the **format** dropdown to **Bytes**
-3. Change the **format pattern** to: *0,0.[000]b*
-4. Click **Update Field**
-5. Repeat this process for **range_end**, **slice_range_start** and **slice_range_end**
-
-#### Format Field: Steam ID 3
-
-1. Scroll down to the **steam_id_3** field and click the **edit** pencil
-2. Change the **format** dropdown to **Url**
-3. Change **Url Template** to: *http://steamid.co/player.php?input=U:1:{{value}}*
-4. Change **Label Template** to *{{value}}*
-5. Click **Update Field**
-
-#### Format Field: Steam Depot ID
-
-1. Scroll down to the **steam_depot_id** field and click the **edit** pencil
-2. Change the **format** dropdown to **Url**
-3. Change **Url Template** to: *http://steamdb.info/depot/{{value}}*
-4. Change **Label Template** to *Depot {{value}}*
-5. Click **Update Field**
-
-That's it - you're done! Now you can navigate to **Dashboards** and choose a dashboard to see what's going on with your lancache.
-
 # Available Dashboards
 
 * **Overall** - Global cumulative data about the cache
