@@ -36,8 +36,8 @@ fi
 
 # Configure Nginx as reverse proxy for Kibana
 rm -f /etc/nginx/sites-enabled/default
-ln -s $SCRIPT_DIR/configs/nginx/kibana /etc/nginx/sites-available/kibana
-ln -s /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
+ln -sf $SCRIPT_DIR/configs/nginx/kibana /etc/nginx/sites-available/kibana
+ln -sf /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
 
 # Configure logstash with the lancache pipeline
 cp $SCRIPT_DIR/configs/logstash/lancache-pipeline.conf /etc/logstash/conf.d/lancache-pipeline.conf
@@ -67,7 +67,7 @@ chmod 0640 /etc/logstash/conf.d/*
 
 # Wait for Kibana to start
 echo "Waiting for Kibana to start"
-while ! curl --output /dev/null --silent --head --fail http://localhost:5601; do
+while ! curl --output /dev/null --silent --head --fail -H "Content-Type: application/json" -H "kbn-xsrf: true" http://localhost:5601/api/saved_objects/?fields=id; do
   sleep 1 && echo -n .
 done
 echo "Kibana started"
