@@ -32,7 +32,8 @@ fi
 /usr/bin/apt install -y elasticsearch \
                         logstash \
                         kibana \
-                        nginx
+                        nginx \
+                        jq
 
 # Configure Nginx as reverse proxy for Kibana
 rm -f /etc/nginx/sites-enabled/default
@@ -72,16 +73,20 @@ while ! curl --output /dev/null --silent --head --fail -H "Content-Type: applica
 done
 echo "Kibana started"
 
-# Import the Kibana index pattern
+# Import the Kibana index pattern and get its ID
+INDEX_ID=$(/usr/bin/curl -X POST \
+              -H "Content-Type: application/json" \
+              -H "kbn-xsrf: true" \
+              -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json \
+              "http://localhost:5601/api/saved_objects/index-pattern" \
+              | jq -r '.id')
+
+# Set index pattern as default
 /usr/bin/curl -X POST \
               -H "Content-Type: application/json" \
               -H "kbn-xsrf: true" \
-              -i -d@$SCRIPT_DIR/configs/kibana/index-pattern/lancache.json \
-              "http://localhost:5601/api/saved_objects/index-pattern"
-
-# Install Kibana importer
-rm -rf /tmp/kibana-importer
-/usr/bin/git clone https://github.com/mnp/kibana-importer.git /tmp/kibana-importer
-
-# Import Kibana searches, visualisations and dashboards
-/tmp/kibana-importer/kibana-importer.py --json $SCRIPT_DIR/configs/kibana/export.json --fix-idx
+              -i \
+              -d "{\"value\":\"$INDEX_ID\"}" \
+              "http://localhost:5601/api/kibana/settings/defaultIndex"
+echo
+echo "Done"
