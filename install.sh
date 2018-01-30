@@ -18,6 +18,10 @@ if [ -f $SCRIPT_DIR/.env ]; then
     source $SCRIPT_DIR/.env
 fi
 
+# Check all required variables are set
+: "${KIBANA_USERNAME:?must be set}"
+: "${KIBANA_PASSWORD:?must be set}"
+
 # Add the elastic public key
 /usr/bin/wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
@@ -33,12 +37,16 @@ fi
                         logstash \
                         kibana \
                         nginx \
-                        jq
+                        jq \
+                        apache2-utils
 
 # Configure Nginx as reverse proxy for Kibana
 rm -f /etc/nginx/sites-enabled/default
 ln -sf $SCRIPT_DIR/configs/nginx/kibana /etc/nginx/sites-available/kibana
 ln -sf /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
+
+# Create the basic auth password file
+/usr/bin/htpasswd -c /etc/nginx/.htpasswd -b "$KIBANA_USERNAME" "$KIBANA_PASSWORD"
 
 # Configure logstash with the lancache pipeline
 cp $SCRIPT_DIR/configs/logstash/lancache-pipeline.conf /etc/logstash/conf.d/lancache-pipeline.conf
@@ -89,4 +97,5 @@ INDEX_ID=$(/usr/bin/curl -X POST \
               -d "{\"value\":\"$INDEX_ID\"}" \
               "http://localhost:5601/api/kibana/settings/defaultIndex"
 echo
+
 echo "Done"
