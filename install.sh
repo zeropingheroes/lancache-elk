@@ -46,7 +46,7 @@ ln -sf $SCRIPT_DIR/configs/nginx/kibana /etc/nginx/sites-available/kibana
 ln -sf /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
 
 # Create the basic auth password file
-/usr/bin/htpasswd -c /etc/nginx/.htpasswd -b "$KIBANA_USERNAME" "$KIBANA_PASSWORD"
+/usr/bin/htpasswd -bc /etc/nginx/.htpasswd "$KIBANA_USERNAME" "$KIBANA_PASSWORD"
 
 # Configure logstash with the lancache pipeline
 cp $SCRIPT_DIR/configs/logstash/lancache-pipeline.conf /etc/logstash/conf.d/lancache-pipeline.conf
