@@ -13,22 +13,19 @@ Collect, process and visualise statistics from `zeropingheroes/lancache` with El
 * [`zeropingheroes/lancache`](https://github.com/zeropingheroes/lancache)
 * [`zeropingheroes/lancache-filebeat`](https://github.com/zeropingheroes/lancache-filebeat)
 
-## Configuration
-
-All configuration is done via environment variables:
-
-1. `cp .env.example .env`
-2. `nano .env`
-
 ## Installation
 
 1. `git clone https://github.com/zeropingheroes/lancache-elk.git && cd lancache-elk`
 
-2.  `./install.sh`
+2. `cp .env.example .env`
 
-3. Log into the Kibana web interface and go to **Management** > **Saved Objects**
+3. `nano .env`
 
-4. Import `lancache-elk/configs/kibana/export.json` accepting suggested index fixes
+4.  `./install.sh`
+
+5. Log into the Kibana web interface and go to **Management** > **Saved Objects**
+
+6. Import `lancache-elk/configs/kibana/export.json` accepting suggested index fixes
 
 # Available Dashboards
 
