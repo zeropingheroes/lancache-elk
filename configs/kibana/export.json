@@ -1,14 +1,14 @@
 [
   {
-    "_id": "38ed44f0-039e-11e8-bd75-31bf0ae570f8",
+    "_id": "a3f45060-0545-11e8-a29f-a322dcdc3c6e",
     "_type": "dashboard",
     "_source": {
-      "title": "General",
+      "title": "Errors",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"gridData\":{\"w\":6,\"h\":3,\"x\":0,\"y\":0,\"i\":\"1\"},\"version\":\"6.1.2\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"id\":\"0261cc80-039e-11e8-bd75-31bf0ae570f8\"}]",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":4,\"w\":12,\"h\":3,\"i\":\"1\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"499bab10-053e-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":4,\"i\":\"2\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"4550fe80-053d-11e8-a29f-a322dcdc3c6e\"}]",
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
-      "uiStateJSON": "{}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"asc\"}}}}}",
       "version": 1,
       "timeRestore": true,
       "timeTo": "now",
@@ -27,10 +27,64 @@
     }
   },
   {
-    "_id": "c0309bc0-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "fac53c10-052c-11e8-a7fb-63a3bd4f2164",
+    "_type": "dashboard",
+    "_source": {
+      "title": "General",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":3,\"w\":4,\"h\":4,\"i\":\"1\"},\"id\":\"ec8b9270-052c-11e8-a7fb-63a3bd4f2164\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":4,\"y\":0,\"w\":4,\"h\":3,\"i\":\"2\"},\"id\":\"4395eec0-0542-11e8-a29f-a322dcdc3c6e\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":8,\"y\":0,\"w\":4,\"h\":3,\"i\":\"3\"},\"id\":\"6269a030-0542-11e8-a29f-a322dcdc3c6e\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":4,\"y\":3,\"w\":4,\"h\":4,\"i\":\"5\"},\"id\":\"ec4ab3b0-053e-11e8-a29f-a322dcdc3c6e\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":8,\"y\":3,\"w\":4,\"h\":4,\"i\":\"6\"},\"id\":\"defa0db0-0542-11e8-a29f-a322dcdc3c6e\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":0,\"w\":4,\"h\":3,\"i\":\"7\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"44df61e0-0546-11e8-a29f-a322dcdc3c6e\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"legendOpen\":false}},\"P-4\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"spy\":{\"mode\":{\"name\":null,\"fill\":false}}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-5y",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f5bc3170-053f-11e8-a29f-a322dcdc3c6e",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Steam",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":8,\"y\":4,\"w\":4,\"h\":3,\"i\":\"1\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"9c2c5630-053f-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":0,\"w\":3,\"h\":4,\"i\":\"2\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"ec8b9270-052c-11e8-a7fb-63a3bd4f2164\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":0,\"w\":3,\"h\":4,\"i\":\"3\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"4395eec0-0542-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":9,\"y\":0,\"w\":3,\"h\":4,\"i\":\"4\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"6269a030-0542-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":4,\"w\":4,\"h\":3,\"i\":\"5\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"b5878210-0541-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":4,\"y\":4,\"w\":4,\"h\":3,\"i\":\"6\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"e8310560-0541-11e8-a29f-a322dcdc3c6e\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":3,\"y\":0,\"w\":3,\"h\":4,\"i\":\"7\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"44df61e0-0546-11e8-a29f-a322dcdc3c6e\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-5y",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"upstream:steam\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ee6bd610-052a-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "upstream_proxied_but_not_cached",
+      "title": "request_proxied_but_not_cached",
       "description": "",
       "hits": 0,
       "columns": [
@@ -42,7 +96,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"(NOT _exists_:cache_status) AND (_exists_:upstream_server)\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"(NOT _exists_:cache_status) AND (_exists_:upstream_server)\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -50,10 +104,10 @@
     }
   },
   {
-    "_id": "d9c204c0-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "7a5ae530-052b-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "upstream_cached",
+      "title": "request_steam_depot",
       "description": "",
       "hits": 0,
       "columns": [
@@ -65,7 +119,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"77e5f0b0-0382-11e8-bd75-31bf0ae570f8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"_exists_:cache_status\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"_exists_:steam_depot_id\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -73,10 +127,10 @@
     }
   },
   {
-    "_id": "c0c9f590-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "8f3bbe70-052b-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "upstream_steam_cache_miss",
+      "title": "request_steam",
       "description": "",
       "hits": 0,
       "columns": [
@@ -88,7 +142,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream:steam AND cache_status:MISS\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"upstream:steam\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -96,10 +150,10 @@
     }
   },
   {
-    "_id": "c1630140-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "ad680c50-052b-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "upstream_steam_depot_request",
+      "title": "request_blizzard",
       "description": "",
       "hits": 0,
       "columns": [
@@ -111,7 +165,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"_exists_:steam_depot_id\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream:blizzard\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -119,10 +173,10 @@
     }
   },
   {
-    "_id": "bf979010-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "a355ec50-052b-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "error",
+      "title": "request_origin",
       "description": "",
       "hits": 0,
       "columns": [
@@ -134,7 +188,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream_http_status_code: 5** OR http_status_code: 5**\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream:origin\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -142,10 +196,10 @@
     }
   },
   {
-    "_id": "bf69a240-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "b9075c00-052b-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "cache_miss",
+      "title": "request_cache_miss",
       "description": "",
       "hits": 0,
       "columns": [
@@ -157,7 +211,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"cache_status:\\\"MISS\\\"\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"cache_status:MISS\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -165,10 +219,10 @@
     }
   },
   {
-    "_id": "c1fc3400-039d-11e8-bd75-31bf0ae570f8",
+    "_id": "02484230-052c-11e8-a7fb-63a3bd4f2164",
     "_type": "search",
     "_source": {
-      "title": "upstream_steam",
+      "title": "request_cache_hit",
       "description": "",
       "hits": 0,
       "columns": [
@@ -180,7 +234,7 @@
       ],
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"upstream:steam\",\"language\":\"lucene\"},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"cache_status:HIT\",\"language\":\"lucene\"},\"filter\":[]}"
       }
     },
     "_meta": {
@@ -188,14 +242,263 @@
     }
   },
   {
-    "_id": "0261cc80-039e-11e8-bd75-31bf0ae570f8",
+    "_id": "1d9cfb80-052b-11e8-a7fb-63a3bd4f2164",
+    "_type": "search",
+    "_source": {
+      "title": "request_proxied_and_cached",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"_exists_:cache_status\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5a0be8f0-052c-11e8-a7fb-63a3bd4f2164",
+    "_type": "search",
+    "_source": {
+      "title": "request_steam_depot_added_to_cache",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"(cache_status:MISS) AND (_exists_:steam_depot_id)\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "64894350-052b-11e8-a7fb-63a3bd4f2164",
+    "_type": "search",
+    "_source": {
+      "title": "request_error",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"257c0350-0535-11e8-a29f-a322dcdc3c6e\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"(upstream_http_status_code:[400 TO 599]) OR (http_status_code:[400 TO 599])\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "499bab10-053e-11e8-a29f-a322dcdc3c6e",
     "_type": "visualization",
     "_source": {
-      "title": "cache_status",
-      "visState": "{\"title\":\"cache_status\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"cache_status.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "title": "requests_proxied_but_not_cached",
+      "visState": "{\"title\":\"requests_proxied_but_not_cached\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"upstream.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Upstream\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"url_path.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"URL\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"bytes\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Request Size\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "ee6bd610-052a-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "9c2c5630-053f-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "steam_depots_added_to_cache",
+      "visState": "{\"title\":\"steam_depots_added_to_cache\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Cached Size\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"steam_depot_id.keyword\",\"size\":999999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Depot\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "5a0be8f0-052c-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e8310560-0541-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "steam_served_per_user",
+      "visState": "{\"title\":\"steam_served_per_user\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Served\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"steam_id_3.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Steam ID3\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "7a5ae530-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b5878210-0541-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "steam_served_per_depot",
+      "visState": "{\"title\":\"steam_served_per_depot\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Served\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"steam_depot_id.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Depot ID\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "7a5ae530-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "defa0db0-0542-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "served_per_ip",
+      "visState": "{\"title\":\"served_per_ip\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Total Served\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"client_ip.keyword\",\"size\":99999999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"IP\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "savedSearchId": "1d9cfb80-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4395eec0-0542-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "cache_total_added",
+      "visState": "{\"title\":\"cache_total_added\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Added To Cache\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
-      "savedSearchId": "d9c204c0-039d-11e8-bd75-31bf0ae570f8",
+      "savedSearchId": "b9075c00-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ec4ab3b0-053e-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "served_per_upstream",
+      "visState": "{\"title\":\"served_per_upstream\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Served\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"upstream.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Upstream\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "savedSearchId": "1d9cfb80-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ec8b9270-052c-11e8-a7fb-63a3bd4f2164",
+    "_type": "visualization",
+    "_source": {
+      "title": "cache_ratio",
+      "visState": "{\"title\":\"cache_ratio\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Served\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"cache_status.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Status\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "savedSearchId": "1d9cfb80-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4550fe80-053d-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "request_errors",
+      "visState": "{\"title\":\"request_errors\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Requests\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"upstream.keyword\",\"size\":999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Upstream\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"upstream_http_status_code.keyword\",\"size\":9999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Upstream HTTP Status Code\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"url_path.keyword\",\"size\":9999,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"URL\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":1,\"direction\":\"asc\"}}}}",
+      "description": "",
+      "savedSearchId": "64894350-052b-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "44df61e0-0546-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "cache_total_internet_bandwidth_saved",
+      "visState": "{\"title\":\"cache_total_internet_bandwidth_saved\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Internet Bandwidth Saved\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "02484230-052c-11e8-a7fb-63a3bd4f2164",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "6269a030-0542-11e8-a29f-a322dcdc3c6e",
+    "_type": "visualization",
+    "_source": {
+      "title": "cache_total_served",
+      "visState": "{\"title\":\"cache_total_served\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\",\"customLabel\":\"Served Total\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "1d9cfb80-052b-11e8-a7fb-63a3bd4f2164",
       "version": 1,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
