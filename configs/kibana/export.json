@@ -37,8 +37,8 @@
       "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
       "version": 1,
       "timeRestore": true,
-      "timeTo": "Mon Feb 19 2018 23:59:59 GMT+0000",
-      "timeFrom": "Fri Feb 16 2018 18:45:00 GMT+0000",
+      "timeTo": "now/y",
+      "timeFrom": "now/y",
       "refreshInterval": {
         "display": "5 seconds",
         "pause": false,
@@ -64,8 +64,8 @@
       "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
       "version": 1,
       "timeRestore": true,
-      "timeTo": "Fri Feb 16 2018 21:47:47 GMT+0000",
-      "timeFrom": "Fri Feb 16 2018 19:00:00 GMT+0000",
+      "timeTo": "now/y",
+      "timeFrom": "now/y",
       "refreshInterval": {
         "display": "5 seconds",
         "pause": false,
