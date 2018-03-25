@@ -2,6 +2,19 @@
 
 Collect, process and visualise statistics from `zeropingheroes/lancache` with Elasticsearch, Logstash and Kibana
 
+## Screenshots
+
+These screenshots are taken from a 100 person event, with the cache pre-loaded using [zeropingheroes/lancache-autofill](https://github.com/zeropingheroes/lancache-autofill)
+
+### Dashboard - General
+![Dashboard - General](https://i.imgur.com/65tnTTe.png)
+
+### Dashboard - Steam
+![Dashboard - General](https://i.imgur.com/dZT0LOo.png)
+
+### Dashboard - Errors
+![Dashboard - General](https://i.imgur.com/JitcGTH.png)
+
 ## Requirements
 
 ### ELK Server
