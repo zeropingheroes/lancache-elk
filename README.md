@@ -22,9 +22,11 @@ These screenshots are taken from a 100 person event, with the cache pre-loaded u
 * Ubuntu Server 16.04
 
 ### Lancache Server
-
+Running on a seperate machine (VM) because both will use port 80.
 * [`zeropingheroes/lancache`](https://github.com/zeropingheroes/lancache)
 * [`zeropingheroes/lancache-filebeat`](https://github.com/zeropingheroes/lancache-filebeat)
+
+you'll need to point to your lancache-elk machine in the configuration of lancache-filebeat
 
 ## Installation
 
@@ -39,6 +41,16 @@ These screenshots are taken from a 100 person event, with the cache pre-loaded u
 5. Log into the Kibana web interface and go to **Management** > **Saved Objects**
 
 6. Import `lancache-elk/configs/kibana/export.json` accepting suggested index fixes
+
+## Allow remote acces
+If you want to acces your dashboard from your local network you can do this in some simple steps.
+
+1. `sudo nano /etc/kibana/kibana.yml`
+
+2. remove the # from `#server.port: 5601` and `#server.host: "localhost"`
+
+3. change `server.host: "localhost"` to `server.host: "LOCAL_IP"` like: `server.host: "192.168.178.50"`
+
 
 # Available Dashboards
 
