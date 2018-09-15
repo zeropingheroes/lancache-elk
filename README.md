@@ -42,16 +42,6 @@ you'll need to point to your lancache-elk machine in the configuration of lancac
 
 6. Import `lancache-elk/configs/kibana/export.json` accepting suggested index fixes
 
-## Allow remote acces
-If you want to acces your dashboard from your local network you can do this in some simple steps.
-
-1. `sudo nano /etc/kibana/kibana.yml`
-
-2. remove the # from `#server.port: 5601` and `#server.host: "localhost"`
-
-3. change `server.host: "localhost"` to `server.host: "LOCAL_IP"` like: `server.host: "192.168.178.50"`
-
-
 # Available Dashboards
 
 * **Overall** - Global cumulative data about the cache
