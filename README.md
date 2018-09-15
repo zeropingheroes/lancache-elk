@@ -22,11 +22,11 @@ These screenshots are taken from a 100 person event, with the cache pre-loaded u
 * Ubuntu Server 16.04
 
 ### Lancache Server
-Running on a seperate machine (VM) because both will use port 80.
+
 * [`zeropingheroes/lancache`](https://github.com/zeropingheroes/lancache)
 * [`zeropingheroes/lancache-filebeat`](https://github.com/zeropingheroes/lancache-filebeat)
 
-you'll need to point to your lancache-elk machine in the configuration of lancache-filebeat
+_`lancache-elk` cannot be run on the same host as `lancache` as both use port 80._
 
 ## Installation
 
