@@ -40,7 +40,9 @@ _`lancache-elk` cannot be run on the same host as `lancache` as both use port 80
 
 5. Log into the Kibana web interface and go to **Management** > **Saved Objects**
 
-6. Import `lancache-elk/configs/kibana/export.json` accepting suggested index fixes
+6. Import `lancache-elk/configs/kibana/export.json` choosing "logstash-*" in the dropdown under "New index pattern"
+
+7. Repeat step 6 a second time - not sure exactly why this is necessary...
 
 # Available Dashboards
 
