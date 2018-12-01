@@ -19,7 +19,7 @@ These screenshots are taken from a 100 person event, with the cache pre-loaded u
 
 ### ELK Server
 
-* Ubuntu Server 16.04
+* Ubuntu Server 18.04
 
 ### Lancache Server
 
@@ -34,7 +34,7 @@ _`lancache-elk` cannot be run on the same host as `lancache` as both use port 80
 
 2. `cp .env.example .env`
 
-3. `nano .env`
+3. `nano .env` - add a password for the web interface
 
 4.  `./install.sh`
 
