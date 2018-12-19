@@ -57,6 +57,16 @@ _`lancache-elk` cannot be run on the same host as `lancache` as both use port 80
 Because we use `slice` for these upstreams, Nginx reports a cache hit for almost all requests from clients, as the single client request has spawned one or more subrequests which fill the cache.
 This also means that our statistics for how much data has been added to the cache is incorrect too. If you have a workaround for this behaviour, please submit a pull request. 
 
+# Troubleshooting
+
+Check logs for errors:
+```bash
+tail /var/log/filebeat
+tail /var/log/logstash
+tail /var/log/elasticsearch
+journalctl -u kibana.service
+```
+
 ## Contributing
 
 Please submit pull requests for improving the configuration files here.
