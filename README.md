@@ -59,12 +59,17 @@ This also means that our statistics for how much data has been added to the cach
 
 # Troubleshooting
 
-Check logs for errors:
+Check your ELK server's log files:
 ```bash
-tail /var/log/filebeat
-tail /var/log/logstash
-tail /var/log/elasticsearch
+tail /var/log/logstash/logstash-plain.log
+tail /var/log/elasticsearch/elasticsearch.log
 journalctl -u kibana.service
+```
+
+Check your lancache server's log files:
+```bash
+tail /var/log/filebeat/filebeat
+journalctl -u filebeat.service
 ```
 
 ## Contributing
