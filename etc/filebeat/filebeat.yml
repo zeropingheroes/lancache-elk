@@ -1,0 +1,12 @@
+filebeat.inputs:
+- type: filestream
+  id: lancache
+  enabled: true
+  paths:
+    - /srv/lancache/logs/*/*.log
+
+filebeat.config.modules:
+  reload.enabled: true
+
+output.logstash:
+  hosts: ["example.com:5044"]
