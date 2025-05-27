@@ -3,7 +3,9 @@ filebeat.inputs:
   id: lancache
   enabled: true
   paths:
-    - /srv/lancache/logs/*/*.log
+    - /srv/lancache/logs/*.log
+    - /srv/lancache/logs/http/*.log
+    - /srv/lancache/logs/stream/*.log
 
 filebeat.config.modules:
   reload.enabled: true
