@@ -1,0 +1,238 @@
+{
+  "index_patterns": ["logs-zeropingheroes-lancache-elk-*"],
+  "data_stream": {},
+  "template": {
+    "settings": {
+      "index": {
+        "mode": "logsdb",
+        "routing": {
+          "allocation": {
+            "include": {
+              "_tier_preference": "data_hot"
+            }
+          }
+        },
+        "mapping": {
+          "source": {
+            "mode": "STORED"
+          }
+        }
+      }
+    },
+    "mappings": {
+      "_data_stream_timestamp": {
+        "enabled": true
+      },
+      "dynamic_templates": [],
+      "properties": {
+        "@timestamp": {
+          "type": "date",
+          "ignore_malformed": false
+        },
+        "client": {
+          "properties": {
+            "bytes": {
+              "type": "long"
+            },
+            "ip": {
+              "type": "ip"
+            }
+          }
+        },
+        "error": {
+          "properties": {
+            "message": {
+              "type": "match_only_text"
+            }
+          }
+        },
+        "host": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "http": {
+          "properties": {
+            "request": {
+              "properties": {
+                "method": {
+                  "type": "keyword"
+                },
+                "ranges": {
+                  "properties": {
+                    "end": {
+                      "type": "long"
+                    },
+                    "original": {
+                      "type": "keyword"
+                    },
+                    "start": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "referrer": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "response": {
+              "properties": {
+                "body": {
+                  "properties": {
+                    "bytes": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "status_code": {
+                  "type": "long",
+                  "ignore_malformed": false,
+                  "coerce": true
+                }
+              }
+            },
+            "version": {
+              "type": "keyword"
+            }
+          }
+        },
+        "log": {
+          "properties": {
+            "level": {
+              "type": "keyword"
+            }
+          }
+        },
+        "nginx": {
+          "properties": {
+            "bytes": {
+              "type": "long"
+            },
+            "connection_id": {
+              "type": "long",
+              "ignore_malformed": false,
+              "coerce": true
+            },
+            "session_duration": {
+              "type": "float"
+            }
+          }
+        },
+        "process": {
+          "properties": {
+            "pid": {
+              "type": "long"
+            },
+            "thread": {
+              "properties": {
+                "id": {
+                  "type": "long"
+                }
+              }
+            }
+          }
+        },
+        "server": {
+          "properties": {
+            "bytes": {
+              "type": "long"
+            },
+            "ip": {
+              "type": "ip"
+            }
+          }
+        },
+        "steam": {
+          "properties": {
+            "depot": {
+              "properties": {
+                "chunk": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "id": {
+                  "type": "keyword"
+                },
+                "manifest": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    },
+                    "segment1": {
+                      "type": "keyword"
+                    },
+                    "segment2": {
+                      "type": "keyword"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "upstream": {
+          "properties": {
+            "address": {
+              "type": "keyword"
+            },
+            "bytes": {
+              "type": "long",
+              "ignore_malformed": false,
+              "coerce": true
+            },
+            "cache_status": {
+              "type": "keyword"
+            },
+            "label": {
+              "type": "keyword"
+            },
+            "response": {
+              "properties": {
+                "status_code": {
+                  "type": "long",
+                  "ignore_malformed": false,
+                  "coerce": true
+                },
+                "time": {
+                  "type": "float",
+                  "ignore_malformed": false,
+                  "coerce": true
+                }
+              }
+            },
+            "url": {
+              "type": "keyword"
+            }
+          }
+        },
+        "url": {
+          "properties": {
+            "path": {
+              "type": "wildcard"
+            },
+            "query": {
+              "type": "keyword"
+            }
+          }
+        },
+        "user_agent": {
+          "properties": {
+            "original": {
+              "type": "match_only_text"
+            }
+          }
+        }
+      }
+    },
+    "aliases": {},
+    "lifecycle": {
+      "enabled": true
+    }
+  }
+}
