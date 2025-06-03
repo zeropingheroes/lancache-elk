@@ -140,7 +140,7 @@ nano .env
 /opt/lancache-elk/kibana-import-data-view.sh
 ```
 
-## Set up Filebeat on host running `zeropingheroes/lancache`
+## Set up Filebeat on host running `zeropingheroes/lancache-bare-metal`
 
 ### Install Filebeat
 ```
@@ -156,7 +156,7 @@ sudo apt install filebeat -y
 git clone git@github.com/zeropingheroes/lancache-elk /opt
 ```
 
-### Configure Filebeat to use `zeropingheroes/lancache` config
+### Configure Filebeat to use `zeropingheroes/lancache-bare-metal` config
 ```
 sudo mv /etc/filebeat/filebeat.yml /etc/filebeat/filebeat.yml.default
 sudo ln -s /opt/lancache-elk/etc/filebeat/filebeat.yml /etc/filebeat/filebeat.yml
