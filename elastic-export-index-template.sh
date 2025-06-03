@@ -3,13 +3,17 @@
 # Exit on any errors
 set -e
 
-# Load environment variables (edit as needed)
+# Load environment variables
 source .env
 
-# Set defaults if not set in .env
-ES_URL="${ES_URL:-https://localhost:9200}"
-ES_USERNAME="${ES_USERNAME:-elastic}"
-ES_PASSWORD="${ES_PASSWORD:-changeme}"
+# Check required environment variables
+if [[ -z "$ELASTIC_USERNAME" || -z "$ELASTIC_PASSWORD" ]]; then
+  echo "Error: ELASTIC_USERNAME and ELASTIC_PASSWORD environment variables must be set."
+  exit 1
+fi
+
+# Default Elasticsearch URL if not set
+ELASTIC_URL="${ELASTIC_URL:-https://localhost:9200}"
 
 # Directory to save exports
 EXPORT_DIR="index-templates"
@@ -39,8 +43,8 @@ if [[ -f "$OUTFILE" ]]; then
 fi
 
 # Get the template
-curl -k -sS -u "$ES_USERNAME:$ES_PASSWORD" \
-  -X GET "$ES_URL/_index_template/$TEMPLATE_NAME" \
+curl -k -sS -u "$ELASTIC_USERNAME:$ELASTIC_PASSWORD" \
+  -X GET "$ELASTIC_URL/_index_template/$TEMPLATE_NAME" \
   -H 'Content-Type: application/json' \
   | jq '.index_templates[0].index_template' > "$OUTFILE"
 

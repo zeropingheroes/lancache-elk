@@ -7,13 +7,13 @@ set -e
 source .env
 
 # Check required environment variables
-if [[ -z "$ES_USERNAME" || -z "$ES_PASSWORD" ]]; then
-  echo "Error: ES_USERNAME and ES_PASSWORD environment variables must be set."
+if [[ -z "$ELASTIC_USERNAME" || -z "$ELASTIC_PASSWORD" ]]; then
+  echo "Error: ELASTIC_USERNAME and ELASTIC_PASSWORD environment variables must be set."
   exit 1
 fi
 
 # Default Elasticsearch URL if not set
-ES_URL="${ES_URL:-https://localhost:9200}"
+ELASTIC_URL="${ELASTIC_URL:-https://localhost:9200}"
 
 import_template() {
   local file="$1"
@@ -26,8 +26,8 @@ import_template() {
   fi
 
   echo "Importing index template '$name' from $file..."
-  curl --user "$ES_USERNAME:$ES_PASSWORD" \
-       --request PUT "$ES_URL/_index_template/$name" \
+  curl --user "$ELASTIC_USERNAME:$ELASTIC_PASSWORD" \
+       --request PUT "$ELASTIC_URL/_index_template/$name" \
        --header 'Content-Type: application/json' \
        --data-binary "@$file" \
        --insecure \
