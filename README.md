@@ -199,6 +199,47 @@ mv 99-output-elastic.conf.disabled 99-output-elastic.conf
 sudo journalctl -u filebeat
 ```
 
+## Field reference
+
+| Elastic Field                 | Type       | Elastic Data Type | HTTP Access | HTTP Error | Stream Access | Stream Error |
+| ----------------------------- | ---------- | ----------------- | ----------- | ---------- | ------------- | ------------ |
+| @timestamp                    | Base ECS   | date              | ✅         | ✅         | ✅           | ✅           |
+| client.bytes                  | Base ECS   | long              | ✅         | ❌         | ✅           | ✅           |
+| client.ip                     | Base ECS   | ip                | ✅         | ✅         | ✅           | ✅           |
+| error.message                 | Base ECS   | match_only_text   | ❌         | ✅         | ❌           | ✅           |
+| http.request.method           | Base ECS   | keyword           | ✅         | ✅         | ❌           | ❌           |
+| http.request.ranges.end       | Base ECS   | long              | ✅         | ❌         | ❌           | ❌           |
+| http.request.ranges.original  | Base ECS   | keyword           | ✅         | ❌         | ❌           | ❌           |
+| http.request.ranges.start     | Base ECS   | long              | ✅         | ❌         | ❌           | ❌           |
+| http.request.referrer         | Base ECS   | keyword           | ✅         | ✅         | ❌           | ❌           |
+| http.response.body.bytes      | Base ECS   | long              | ✅         | ❌         | ❌           | ❌           |
+| http.response.status_code     | Base ECS   | long              | ✅         | ✅         | ✅           | ❌           |
+| http.version                  | Base ECS   | keyword           | ✅         | ✅         | ❌           | ❌           |
+| log.level                     | Base ECS   | keyword           | ✅         | ✅         | ✅           | ✅           |
+| nginx.bytes                   | Base ECS   | long              | ❌         | ❌         | ❌           | ✅           |
+| nginx.connection_id           | Custom ECS | long              | ❌         | ✅         | ❌           | ✅           |
+| nginx.session_duration        | Custom ECS | float             | ✅         | ❌         | ✅           | ❌           |
+| nginx.slice.range.end         | Custom ECS | long              | ✅         | ❌         | ❌           | ❌           |
+| nginx.slice.range.start       | Custom ECS | long              | ✅         | ❌         | ❌           | ❌           |
+| process.pid                   | Base ECS   | long              | ❌         | ✅         | ❌           | ✅           |
+| process.thread.id             | Base ECS   | long              | ❌         | ❌         | ❌           | ❌           |
+| server.bytes                  | Base ECS   | long              | ✅         | ❌         | ✅           | ✅           |
+| steam.depot.id                | Custom ECS | keyword           | ✅         | ✅         | ❌           | ❌           |
+| steam.depot.chunk.id          | Custom ECS | keyword           | ✅         | ✅         | ❌           | ❌           |
+| steam.depot.manifest.id       | Custom ECS | keyword           | ✅         | ✅         | ❌           | ❌           |
+| steam.depot.manifest.segment1 | Custom ECS | keyword           | ✅         | ✅         | ❌           | ❌           |
+| steam.depot.manifest.segment2 | Custom ECS | keyword           | ✅         | ✅         | ❌           | ❌           |
+| upstream.address              | Base ECS   | keyword           | ✅         | ✅         | ✅           | ✅           |
+| upstream.bytes                | Base ECS   | long              | ✅         | ❌         | ❌           | ✅           |
+| upstream.cache_status         | Custom ECS | keyword           | ✅         | ❌         | ❌           | ❌           |
+| upstream.label                | Custom ECS | keyword           | ✅         | ✅         | ✅           | ✅           |
+| upstream.response.status_code | Custom ECS | long              | ✅         | ❌         | ❌           | ❌           |
+| upstream.response.time        | Custom ECS | float             | ✅         | ❌         | ❌           | ❌           |
+| upstream.url                  | Custom ECS | keyword           | ❌         | ✅         | ❌           | ❌           |
+| url.path                      | Base ECS   | wildcard          | ✅         | ✅         | ❌           | ❌           |
+| url.query                     | Base ECS   | keyword           | ✅         | ✅         | ❌           | ❌           |
+| user_agent.original           | Base ECS   | match_only_text   | ✅         | ❌         | ❌           | ❌           |
+
 ## References and further reading
 * https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-elasticsearch-with-debian-package 
 * https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-kibana-with-debian-package
