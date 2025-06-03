@@ -1,6 +1,7 @@
 {
-  "index_patterns": ["logs-zeropingheroes-lancache-elk-*"],
-  "data_stream": {},
+  "index_patterns": [
+    "logs-zeropingheroes-lancache-elk-*"
+  ],
   "template": {
     "settings": {
       "index": {
@@ -25,99 +26,13 @@
       },
       "dynamic_templates": [],
       "properties": {
-        "@timestamp": {
-          "type": "date",
-          "ignore_malformed": false
-        },
-        "client": {
+        "server": {
           "properties": {
             "bytes": {
               "type": "long"
             },
             "ip": {
               "type": "ip"
-            }
-          }
-        },
-        "error": {
-          "properties": {
-            "message": {
-              "type": "match_only_text"
-            }
-          }
-        },
-        "host": {
-          "properties": {
-            "name": {
-              "type": "keyword"
-            }
-          }
-        },
-        "http": {
-          "properties": {
-            "request": {
-              "properties": {
-                "method": {
-                  "type": "keyword"
-                },
-                "ranges": {
-                  "properties": {
-                    "end": {
-                      "type": "long"
-                    },
-                    "original": {
-                      "type": "keyword"
-                    },
-                    "start": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "referrer": {
-                  "type": "keyword"
-                }
-              }
-            },
-            "response": {
-              "properties": {
-                "body": {
-                  "properties": {
-                    "bytes": {
-                      "type": "long"
-                    }
-                  }
-                },
-                "status_code": {
-                  "type": "long",
-                  "ignore_malformed": false,
-                  "coerce": true
-                }
-              }
-            },
-            "version": {
-              "type": "keyword"
-            }
-          }
-        },
-        "log": {
-          "properties": {
-            "level": {
-              "type": "keyword"
-            }
-          }
-        },
-        "nginx": {
-          "properties": {
-            "bytes": {
-              "type": "long"
-            },
-            "connection_id": {
-              "type": "long",
-              "ignore_malformed": false,
-              "coerce": true
-            },
-            "session_duration": {
-              "type": "float"
             }
           }
         },
@@ -135,79 +50,67 @@
             }
           }
         },
-        "server": {
-          "properties": {
-            "bytes": {
-              "type": "long"
-            },
-            "ip": {
-              "type": "ip"
-            }
-          }
-        },
-        "steam": {
-          "properties": {
-            "depot": {
-              "properties": {
-                "chunk": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "id": {
-                  "type": "keyword"
-                },
-                "manifest": {
-                  "properties": {
-                    "id": {
-                      "type": "keyword"
-                    },
-                    "segment1": {
-                      "type": "keyword"
-                    },
-                    "segment2": {
-                      "type": "keyword"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "upstream": {
           "properties": {
             "address": {
               "type": "keyword"
             },
             "bytes": {
-              "type": "long",
+              "coerce": true,
               "ignore_malformed": false,
-              "coerce": true
-            },
-            "cache_status": {
-              "type": "keyword"
-            },
-            "label": {
-              "type": "keyword"
+              "type": "long"
             },
             "response": {
               "properties": {
                 "status_code": {
-                  "type": "long",
+                  "coerce": true,
                   "ignore_malformed": false,
-                  "coerce": true
+                  "type": "long"
                 },
                 "time": {
-                  "type": "float",
+                  "coerce": true,
                   "ignore_malformed": false,
-                  "coerce": true
+                  "type": "float"
                 }
               }
             },
+            "label": {
+              "type": "keyword"
+            },
+            "cache_status": {
+              "type": "keyword"
+            },
             "url": {
               "type": "keyword"
+            }
+          }
+        },
+        "nginx": {
+          "properties": {
+            "connection_id": {
+              "coerce": true,
+              "ignore_malformed": false,
+              "type": "long"
+            },
+            "bytes": {
+              "type": "long"
+            },
+            "session_duration": {
+              "type": "float"
+            }
+          }
+        },
+        "log": {
+          "properties": {
+            "level": {
+              "type": "keyword"
+            }
+          }
+        },
+        "error": {
+          "properties": {
+            "message": {
+              "type": "match_only_text"
             }
           }
         },
@@ -218,6 +121,104 @@
             },
             "query": {
               "type": "keyword"
+            }
+          }
+        },
+        "@timestamp": {
+          "ignore_malformed": false,
+          "type": "date"
+        },
+        "host": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "client": {
+          "properties": {
+            "bytes": {
+              "type": "long"
+            },
+            "ip": {
+              "type": "ip"
+            }
+          }
+        },
+        "http": {
+          "properties": {
+            "request": {
+              "properties": {
+                "referrer": {
+                  "type": "keyword"
+                },
+                "method": {
+                  "type": "keyword"
+                },
+                "ranges": {
+                  "properties": {
+                    "original": {
+                      "type": "keyword"
+                    },
+                    "start": {
+                      "type": "long"
+                    },
+                    "end": {
+                      "type": "long"
+                    }
+                  }
+                }
+              }
+            },
+            "response": {
+              "properties": {
+                "status_code": {
+                  "coerce": true,
+                  "ignore_malformed": false,
+                  "type": "long"
+                },
+                "body": {
+                  "properties": {
+                    "bytes": {
+                      "type": "long"
+                    }
+                  }
+                }
+              }
+            },
+            "version": {
+              "type": "keyword"
+            }
+          }
+        },
+        "steam": {
+          "properties": {
+            "depot": {
+              "properties": {
+                "manifest": {
+                  "properties": {
+                    "segment2": {
+                      "type": "keyword"
+                    },
+                    "segment1": {
+                      "type": "keyword"
+                    },
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "chunk": {
+                  "properties": {
+                    "id": {
+                      "type": "keyword"
+                    }
+                  }
+                },
+                "id": {
+                  "type": "keyword"
+                }
+              }
             }
           }
         },
@@ -234,5 +235,10 @@
     "lifecycle": {
       "enabled": true
     }
+  },
+  "composed_of": [],
+  "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
   }
 }
