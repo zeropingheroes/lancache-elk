@@ -5,7 +5,7 @@ Collect, process and visualise statistics from `zeropingheroes/lancache-bare-met
 ## Requirements
 
 * Host running Ubuntu Server 24.04
-* Separate host running [`zeropingheroes/lancache-bare-metal`](https://github.com/zeropingheroes/lancache)
+* Separate host running [`zeropingheroes/lancache-bare-metal`](https://github.com/zeropingheroes/lancache-bare-metal)
 
 ## Set up Elasticsearch, Logstash & Kibana on ELK host
 
